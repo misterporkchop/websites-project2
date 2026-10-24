@@ -1,0 +1,190 @@
+/* base style and color pallet*/
+:root {
+  --accent-1: #607c8c;
+  --primair: #ce898c;
+  --secundair: #f2eabc;
+  --tertiair: #8e6877;
+  --accent-2: #2f767f;
+}
+
+body {
+  font-family: "Capriola", sans-serif;
+  font-weight: 400;
+  background-color: var(--secundair);
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+header h1 {
+  color: var(--tertiair);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.actief {
+  color: var(--primair);
+  text-decoration: underline;
+}
+
+h2 {
+  color: var(--accent-1);
+}
+
+a {
+  color: var(--accent-2);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  margin-top: 2rem;
+  border-top: 2px solid var(--primair);
+  font-size: 0.9rem;
+}
+
+/* Tabel */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+caption {
+  font-weight: bold;
+  color: var(--tertiair);
+  margin-bottom: 0.5rem;
+}
+
+th, td {
+  border: 1px solid var(--accent-1);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--primair);
+}
+
+/* Afbeeldingen */
+.foto {
+  margin: 1rem 0;
+}
+
+.foto img {
+  border: 3px solid var(--primair);
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--tertiair);
+}
+
+/* Hoofdinhoud */
+#inhoud {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+/* Formulier */
+label {
+  color: var(--accent-1);
+}
+
+input, textarea {
+  font-family: inherit;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.4rem;
+  border: 1px solid var(--accent-1);
+  border-radius: 4px;
+}
+
+button {
+  font-family: inherit;
+  background-color: var(--accent-2);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--tertiair);
+}
+
+/* startpagina */
+.foto-rechts {
+  float: right;
+  width: 180px;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.foto-rechts img {
+  width: 100%;
+}
+
+#inhoud::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  .foto-rechts {
+    float: none;
+    margin: 1rem auto;
+  }
+}
+
+/* Video's */
+video {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid var(--primair);
+  border-radius: 8px;
+}
+
+.video-staand video {
+  max-width: 320px;
+}
+
+/* Galerij op de hobbypagina */
+.galerij {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.galerij figure {
+  width: 200px;
+  margin: 0;
+}
+
+.galerij img,
+.galerij video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
