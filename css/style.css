@@ -18,27 +18,36 @@ body {
   line-height: 1.6;
 }
 
+body {
+  padding-top: 4.5rem;
+}
+
 header h1 {
   color: var(--tertiair);
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+/* new navbar */
+.navbar {
+  background-color: var(--secundair);
+  --bs-navbar-color: var(--accent-2);
+  --bs-navbar-hover-color: var(--primair);
+  --bs-navbar-active-color: var(--primair);
+  --bs-navbar-brand-color: var(--tertiair);
+  --bs-navbar-brand-hover-color: var(--tertiair);
 }
 
-nav a {
-  color: var(--accent-2);
-  text-decoration: none;
-}
-
-nav a:hover,
-nav a.actief {
-  color: var(--primair);
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
   text-decoration: underline;
+}
+
+.navbar {
+  border-bottom: 2px solid var(--primair);
+}
+
+.navbar > .container-fluid {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 h2 {
