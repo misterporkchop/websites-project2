@@ -1,149 +1,221 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Your own CSS goes AFTER Bootstrap so it can override it -->
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hobby's/Interesses | Arc Sterckx</title>
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="/images/favicon.ico" sizes="any">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Eigen stijl komt NA Bootstrap en plug-ins -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+  <a class="visually-hidden-focusable" href="#inhoud">Ga naar de inhoud</a>
+
   <header>
-     <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Arc Sterckx</a>
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Hoofdmenu">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Arc Sterckx</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#hoofdmenu" aria-controls="hoofdmenu"
-            aria-expanded="false" aria-label="Menu openen of sluiten">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#hoofdmenu" aria-controls="hoofdmenu"
+                aria-expanded="false" aria-label="Menu openen of sluiten">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="hoofdmenu">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Start</a></li>
-        <li class="nav-item"><a class="nav-link" href="cv.html">Curriculum Vitae</a></li>
-        <li class="nav-item"><a class="nav-link" href="ervaring.html">Ervaring</a></li>
-        <li class="nav-item"><a class="nav-link" href="hobbys.html">Hobby's/Interesses</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+        <div class="collapse navbar-collapse" id="hoofdmenu">
+          <ul class="navbar-nav ms-lg-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Start</a></li>
+            <li class="nav-item"><a class="nav-link" href="cv.html">Curriculum Vitae</a></li>
+            <li class="nav-item"><a class="nav-link" href="ervaring.html">Ervaring</a></li>
+            <li class="nav-item"><a class="nav-link" href="hobbys.html">Hobby's/Interesses</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <main id="inhoud">
-    <h2>Hobby's en interesses</h2>
-    <p>Welkom bij mijn hobby's en interesses! Ik ben iemand die graag connecties maakt en dingen samendoet met anderen. Veel van mijn hobby’s zijn dingen die je met anderen doet, of die alleen maar leuker worden naarmate er meer mensen meedoen.</p>
+  <main id="inhoud" class="flex-grow-1">
+    <div class="container py-5">
+      <header class="text-center mb-4">
+        <h1>Hobby's en interesses</h1>
+        <p class="lead mb-0">Welkom bij mijn hobby's en interesses! Ik ben iemand die graag connecties maakt en dingen samendoet met anderen. Veel van mijn hobby’s zijn dingen die je met anderen doet, of die alleen maar leuker worden naarmate er meer mensen meedoen.</p>
+      </header>
 
-    <h3>Samen iets doen</h3>
-    <p>De twee grootste hobby’s die ik heb zijn Tabletop Role Playing Games/boardgames en balfolk. En bij beide zijn de menselijke connecties die gecreëerd worden tijdens deze activiteiten heel belangrijk. Bij TTRPG’s zoals DnD is dit door samen een verhaal te maken en te verkennen, of ik nu de Gamemaster ben of een speler. En bij balfolk komt deze connectie door samen te dansen en te genieten van de muziek. Wat hier ook mee helpt, is dat je bij veel balfolkdansen regelmatig van danspartner verandert, tussen of tijdens het dansen. Ik kook ook heel graag, zeker als het met en/of voor anderen is. Iemand zien genieten van een van mijn gerechten brengt me altijd veel blijdschap.</p>
+      <!-- Slider (Bootstrap carousel) met 6 afbeeldingen -->
+      <div id="hobbySlider" class="carousel slide hobby-slider mb-5" aria-label="Foto's van mijn hobby's">
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hobbySlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1"></button>
+        <button type="button" data-bs-target="#hobbySlider" data-bs-slide-to="1" aria-label="Foto 2"></button>
+        <button type="button" data-bs-target="#hobbySlider" data-bs-slide-to="2" aria-label="Foto 3"></button>
+        <button type="button" data-bs-target="#hobbySlider" data-bs-slide-to="3" aria-label="Foto 4"></button>
+        <button type="button" data-bs-target="#hobbySlider" data-bs-slide-to="4" aria-label="Foto 5"></button>
+        <button type="button" data-bs-target="#hobbySlider" data-bs-slide-to="5" aria-label="Foto 6"></button>
+        </div>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/hobby-spelen.jpg" class="hobby-slide-img" width="1600" height="900" alt="Dobbelstenen, een character sheet en een schatkist voor tabletop RPG's">
+          <div class="carousel-caption">
+            <h2 class="h5">Tabletop RPG's en boardgames</h2>
+            <p>Samen een verhaal maken en verkennen, als Gamemaster of als speler.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/hobby-fietsen.jpg" class="hobby-slide-img" width="1600" height="1067" alt="Twee mensen op de fiets in een groene omgeving" loading="lazy">
+          <div class="carousel-caption">
+            <h2 class="h5">Fietsen</h2>
+            <p>Lange fietstochten, samen op pad.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/hobby-renaissance-2.jpg" class="hobby-slide-img" width="609" height="342" alt="Twee mensen zittend op een rots op een renaissance fair" loading="lazy">
+          <div class="carousel-caption">
+            <h2 class="h5">Renaissance fairs</h2>
+            <p>Een plek waar iedereen kan zijn wie ze willen.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/hobby-renaissance.jpg" class="hobby-slide-img" width="258" height="463" alt="Twee mensen zittend op een rots op een renaissance fair, andere pose" loading="lazy">
+          <div class="carousel-caption">
+            <h2 class="h5">Kostuums</h2>
+            <p>Je helemaal uitleven met een leuk kostuum.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/hobby-renaissance-3.jpg" class="hobby-slide-img" width="251" height="446" alt="Twee mensen dicht bij elkaar zittend op een rots op een renaissance fair" loading="lazy">
+          <div class="carousel-caption">
+            <h2 class="h5">Samen genieten</h2>
+            <p>bv. Met vrienden genieten van de sfeer op de renaissance fair.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/hobby-balfolk.jpg" class="hobby-slide-img" width="1280" height="720" alt="Mensen dansen onder gekleurde vlaggetjes en lichten op een fair" loading="lazy">
+          <div class="carousel-caption">
+            <h2 class="h5">Balfolk en livemuziek</h2>
+            <p>Samen dansen en genieten van de muziek, met regelmatig een nieuwe danspartner.</p>
+          </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hobbySlider" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Vorige</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hobbySlider" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Volgende</span>
+        </button>
+      </div>
 
-    <h3>Samen iets beleven</h3>
-    <p>Samen een ervaring opdoen is ook iets wat ik altijd leuk vind. Daarom ga ik graag op lange fietstochten, en een goede stevige wandeling is ook altijd fijn. Recent ben ik in de wereld van renaissance fairs gevallen met wat vrienden en ik heb er al heel veel plezier mee gehad. Er is iets magisch (pun intended) aan ergens zijn waar iedereen kan zijn wie ze willen en zich ook kan uitleven door een leuk kostuum te maken. Er zijn bijna altijd een hele hoop leuke workshops over verschillende hobby’s en creatieve activiteiten die je kunt gaan doen, dus je zult altijd wel iets vinden dat bij je past. En dan het ding dat mij het meest verliefd heeft laten worden op renaissance fairs zijn de meerdere podiums met veel verschillende livemuziekbands en -stijlen. Je kunt gaan van dansen op elektronische muziek tussen de elven, dwergen en nog een hoop andere magische wezens naar balfolk dansen met een fee terwijl er een liveband muziek speelt. En dat is niet eens het enige wat er gebeurt op deze podiums! Al ooit naar een WWE-match geweest tussen een hoop fantasiepersonages en wezens? Wel, ik kan nu zeggen dat ik het ooit gedaan heb. En als ik eerlijk moet zijn: ik hield van elke seconde. Dit alles heeft ervoor gezorgd dat ik in korte tijd een echte fanaat van renaissance fairs ben geworden, zoals je waarschijnlijk wel kunt merken, hihi.</p>
+      <div class="row g-4 mb-5">
+        <div class="col-lg-8">
+          <section class="paneel mb-4">
+            <h2>Samen iets doen</h2>
+            <p class="mb-0">De twee grootste hobby’s die ik heb zijn Tabletop Role Playing Games/boardgames en balfolk. En bij beide zijn de menselijke connecties die gecreëerd worden tijdens deze activiteiten heel belangrijk. Bij TTRPG’s zoals DnD is dit door samen een verhaal te maken en te verkennen, of ik nu de Gamemaster ben of een speler. En bij balfolk komt deze connectie door samen te dansen en te genieten van de muziek. Wat hier ook mee helpt, is dat je bij veel balfolkdansen regelmatig van danspartner verandert, tussen of tijdens het dansen. Ik kook ook heel graag, zeker als het met en/of voor anderen is. Iemand zien genieten van een van mijn gerechten brengt me altijd veel blijdschap.</p>
+          </section>
 
-    <h3>Waar vind je mij?</h3>
-    <p>Ik ga vaak naar de WASD in Turnhout. Dat is zo’n beetje mijn stamcafé geworden. Zoals je aan de naam kunt merken, is het ook niet zomaar een café, maar een boardgamecafé! Dit is de plek waar ik meestal mijn TTRPG’s ga spelen, maar vaak ben ik er ook gewoon om eender welk spel te spelen met wie wil. Ik ben ook vaak op verschillende balfolkevenementen aan het dansen en natuurlijk ga ik ook heel vaak naar eender welke renaissance fair die mij interessant lijkt.</p>
+          <section class="paneel">
+            <h2>Samen iets beleven</h2>
+            <p>Samen een ervaring opdoen is ook iets wat ik altijd leuk vind. Daarom ga ik graag op lange fietstochten, en een goede stevige wandeling is ook altijd fijn.</p>
+            <p>Recent ben ik in de wereld van renaissance fairs gevallen met wat vrienden en ik heb er al heel veel plezier mee gehad. Er is iets magisch (pun intended) aan ergens zijn waar iedereen kan zijn wie ze willen en zich ook kan uitleven door een leuk kostuum te maken. Er zijn bijna altijd een hele hoop leuke workshops over verschillende hobby’s en creatieve activiteiten die je kunt gaan doen, dus je zult altijd wel iets vinden dat bij je past.</p>
+            <p>En dan het ding dat mij het meest verliefd heeft laten worden op renaissance fairs zijn de meerdere podiums met veel verschillende livemuziekbands en -stijlen. Je kunt gaan van dansen op elektronische muziek tussen de elven, dwergen en nog een hoop andere magische wezens naar balfolk dansen met een fee terwijl er een liveband muziek speelt.</p>
+            <p class="mb-0">En dat is niet eens het enige wat er gebeurt op deze podiums! Al ooit naar een WWE-match geweest tussen een hoop fantasiepersonages en wezens? Wel, ik kan nu zeggen dat ik het ooit gedaan heb. En als ik eerlijk moet zijn: ik hield van elke seconde. Dit alles heeft ervoor gezorgd dat ik in korte tijd een echte fanaat van renaissance fairs ben geworden, zoals je waarschijnlijk wel kunt merken, hihi.</p>
+          </section>
+        </div>
 
-    <h3>Mijn hobby's op een rij</h3>
-    <ul>
-      <li>Tabletop RPG's (TTRPG's)</li>
-      <li>Boardgames en videogames</li>
-      <li>Balfolk</li>
-      <li>Fietsen</li>
-      <li>Wandelen en hiken</li>
-      <li>Koken</li>
-      <li>Renaissance fairs</li>
-    </ul>
+        <div class="col-lg-4">
+          <section class="paneel">
+            <h2>Waar vind je mij?</h2>
+            <p class="mb-0">Ik ga vaak naar de WASD in Turnhout. Dat is zo’n beetje mijn stamcafé geworden. Zoals je aan de naam kunt merken, is het ook niet zomaar een café, maar een boardgamecafé! Dit is de plek waar ik meestal mijn TTRPG’s ga spelen, maar vaak ben ik er ook gewoon om eender welk spel te spelen met wie wil. Ik ben ook vaak op verschillende balfolkevenementen aan het dansen en natuurlijk ga ik ook heel vaak naar eender welke renaissance fair die mij interessant lijkt.</p>
+          </section>
+        </div>
+      </div>
 
-    <table>
-      <caption>Overzicht van mijn hobby's</caption>
-      <thead>
-        <tr><th>Hobby</th><th>Wat ik er leuk aan vind</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>TTRPG's en boardgames</td><td>Samen een verhaal maken en verkennen, als Gamemaster of als speler</td></tr>
-        <tr><td>Balfolk</td><td>Samen dansen, genieten van de muziek en regelmatig van danspartner wisselen</td></tr>
-        <tr><td>Koken</td><td>Koken met en/of voor anderen en hen zien genieten van mijn gerechten</td></tr>
-        <tr><td>Fietsen, wandelen en hiken</td><td>Samen lange fietstochten en stevige wandelingen maken</td></tr>
-        <tr><td>Renaissance fairs</td><td>Een kostuum maken, workshops volgen en genieten van livemuziek op de podiums</td></tr>
-      </tbody>
-    </table>
+      <section class="paneel mb-5">
+        <h2>Mijn hobby's op een rij</h2>
+        <div class="table-responsive">
+          <table class="table table-striped align-middle mb-0">
+            <caption>Overzicht van mijn hobby's</caption>
+            <thead>
+              <tr><th scope="col">Hobby</th><th scope="col">Wat ik er leuk aan vind</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">TTRPG's en boardgames</th><td>Samen een verhaal maken en verkennen, als Gamemaster of als speler</td></tr>
+              <tr><th scope="row">Balfolk</th><td>Samen dansen, genieten van de muziek en regelmatig van danspartner wisselen</td></tr>
+              <tr><th scope="row">Koken</th><td>Koken met en/of voor anderen en hen zien genieten van mijn gerechten</td></tr>
+              <tr><th scope="row">Fietsen, wandelen en hiken</th><td>Samen lange fietstochten en stevige wandelingen maken</td></tr>
+              <tr><th scope="row">Renaissance fairs</th><td>Een kostuum maken, workshops volgen en genieten van livemuziek op de podiums</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <h3>Foto's en video's</h3>
-    <div class="galerij">
-      <figure class="foto">
-        <img src="/images/hobby-spelen.jpg" alt="Dobbelstenen en een character sheet voor dnd">
-        <figcaption>Boardgames en TTRPG's</figcaption>
-      </figure>
-      <figure class="foto">
-        <img src="/images/hobby-fietsen.jpg" alt="Twee mensen op de fiets">
-        <figcaption>Fietstochten</figcaption>
-      </figure>
-      <figure class="foto">
-        <img src="/images/hobby-renaissance.jpg" alt="Twee mensen zittend op een rots op een renaissance fair">
-        <figcaption>Renaissance fairs #1</figcaption>
-      </figure>
-      <figure class="foto">
-        <img src="/images/hobby-renaissance-2.jpg" alt="Twee mensen zittend op een rots op een renaissance fair, andere pose">
-        <figcaption>Renaissance fair #2</figcaption>
-      </figure>
-      <figure class="foto">
-        <img src="/images/hobby-renaissance-3.jpg" alt="Twee mensen dicht bij elkaar zittend op een rots op een renaissance fair">
-        <figcaption>Renaissance fair #3</figcaption>
-      </figure>
-      <figure class="video">
-        <video controls preload="metadata">
-          <source src="/videos/elfia-ball.mp4" type="video/mp4">
-        </video>
-        <figcaption>Elfia ball</figcaption>
-      </figure>
-      <figure class="video">
-        <video controls preload="metadata">
-          <source src="/videos/elfia-electro-balfolk.mp4" type="video/mp4">
-        </video>
-        <figcaption>Electro balfolk op Elfia</figcaption>
-      </figure>
-      <figure class="video">
-        <video controls preload="metadata">
-          <source src="/videos/elfia-giraffes.mp4" type="video/mp4">
-        </video>
-        <figcaption>Giraffes op Elfia</figcaption>
-      </figure>
+      <section>
+        <h2 class="text-center mb-4">Elfia in beeld</h2>
+        <div class="row g-4 justify-content-center align-items-center">
+          <div class="col-12 col-md-4">
+            <figure class="mb-0">
+              <div class="ratio ratio-16x9 video-kader">
+                <video controls playsinline preload="none" poster="images/poster-elfia-ball.jpg" aria-label="Video van het Elfia ball">
+                  <source src="videos/elfia-ball.mp4" type="video/mp4">
+                  Je browser ondersteunt geen video.
+                </video>
+              </div>
+              <figcaption class="mt-2 text-center">Elfia ball</figcaption>
+            </figure>
+          </div>
+          <div class="col-12 col-md-4">
+            <figure class="mb-0">
+              <div class="ratio ratio-16x9 video-kader">
+                <video controls playsinline preload="none" poster="images/poster-elfia-balfolk.jpg" aria-label="Video van electro balfolk op Elfia">
+                  <source src="videos/elfia-electro-balfolk.mp4" type="video/mp4">
+                  Je browser ondersteunt geen video.
+                </video>
+              </div>
+              <figcaption class="mt-2 text-center">Electro balfolk op Elfia</figcaption>
+            </figure>
+          </div>
+          <div class="col-12 col-md-4">
+            <figure class="mb-0 video-staand">
+              <div class="ratio ratio-9x16 video-kader">
+                <video controls playsinline preload="none" poster="images/poster-elfia-giraffes.jpg" aria-label="Video van giraffes op Elfia">
+                  <source src="videos/elfia-giraffes.mp4" type="video/mp4">
+                  Je browser ondersteunt geen video.
+                </video>
+              </div>
+              <figcaption class="mt-2 text-center">Giraffes op Elfia</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 
-  <footer>
-  <div class="row align-items-center">
-    <div class="col-6">
-      <p class="mb-0">&copy; 2026 Arc Sterckx</p>
+  <footer class="site-footer mt-auto">
+    <div class="container py-2">
+      <div class="row align-items-center gy-1">
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2026 Arc Sterckx</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <ul class="list-inline mb-0 text-center text-md-end">
+            <li class="list-inline-item"><a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" focusable="false" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a></li>
+            <li class="list-inline-item"><a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" focusable="false" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a></li>
+            <li class="list-inline-item"><a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" focusable="false" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="col-6 d-flex justify-content-end gap-2">
-         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-    </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-    </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
-    </svg>
-    </div>
-  </div>
-</footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/menu.js"></script>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/menu.js"></script>
 </body>
 </html>
